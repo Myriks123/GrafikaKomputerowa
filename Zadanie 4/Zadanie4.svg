@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="700" height="500"
+    viewBox="0 0 400 400"
+    preserveAspectRatio="xMidYMid">
+
+    <defs>
+        <g id = "polygon"  fill="black">
+            <animateTransform attributeName = "transform" type = "rotate"
+                from = "0" to ="360"
+                dur = "5s" repeatCount = "indefinite" />
+            <polygon points= "29,5 19,22 0,30 -19,22 -29,5 -25,-15 -10,-28 10,-28 25,-14">
+        </g>
+        <g id = "line" stroke-width="11" >
+            <line x1="-100" x2="100" y1="0" y2="0"/>
+        </g>
+        
+        <g id = "triangle">
+            <polygon points="0,-100 50,70 -50,70" />
+        </g>
+    
+        <g id = "object">
+            <use xlink:href="#polygon" transform="rotate(20) translate(80,0)"/>
+            <use xlink:href="#polygon" transform="rotate(20) translate(-80,0)"/>
+            <use xlink:href="#line" transform= "rotate(20) scale(0.8,1)" stroke = "red"/>
+            <use xlink:href="#triangle" transform="translate(0,70) scale(0.4,0.7)"/>
+        </g>
+    </defs>
+    
+        <use xlink:href="#object" transform="translate(190,250) scale(0.7)" fill="blue"/>
+        <use xlink:href="#object" transform="translate(50,150) scale(0.65)" fill="#6e276e" />
+        <use xlink:href="#object" transform="translate(300,150) scale(0.6)" fill="#046404"/>    
+</svg>
